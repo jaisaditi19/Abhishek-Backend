@@ -2,7 +2,7 @@ const mongoose = require('mongoose'); // Erase if already required
 
 // Declare the Schema of the Mongo model
 var blogSchema = new mongoose.Schema({
-    titlw:{
+    title:{
         type:String,
         required:true,
     },
