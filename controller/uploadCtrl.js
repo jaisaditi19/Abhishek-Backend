@@ -6,6 +6,7 @@ const {
   cloudinaryDeleteImg,
 } = require("../utils/cloudinary");
 const uploadImages = asyncHandler(async (req, res) => {
+  
   try {
     const uploader = (path) => cloudinaryUploadImg(path, "images");
     const urls = [];
@@ -18,6 +19,7 @@ const uploadImages = asyncHandler(async (req, res) => {
       fs.unlinkSync(path);
     }
     const images = urls.map((file) => {
+      console.log(file);
       return file;
     });
     res.json(images);
