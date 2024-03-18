@@ -60,7 +60,7 @@ const loginUserCtrl = asyncHandler(async (req, res) => {
 });
 
 //login as admin
-//login a user
+
 const loginAdmin = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   //check if user exists

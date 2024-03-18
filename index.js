@@ -17,6 +17,8 @@ const bodyParser=require("body-parser");
 const { notFound, errorHandler } = require('./middlewares/errorHandler')
 const cookieParser = require("cookie-parser");
 const morgan=require("morgan");
+const cors = require("cors");
+
 
 
 dbConnect();
@@ -24,6 +26,7 @@ dbConnect();
 //     res.send('Hello user');
 // });
 app.use(morgan("dev"));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(cookieParser());
